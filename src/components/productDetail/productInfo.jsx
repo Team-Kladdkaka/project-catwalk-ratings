@@ -13,7 +13,7 @@ const ProductInfo = (props) => {
   const [ratingAverage, setRatingAverage] = useState(null);
 
   useEffect(() => {
-    fetch(`http://3.21.164.220/reviews/meta?product_id=${props.productId}`)
+    fetch(`http://localhost:3001/reviews/${props.current}/meta`)
       .then((res) => {
         return res.json();
       })

@@ -50,7 +50,7 @@ function ReviewMain(props) {
   // -------------- fetch data from reviews endpoint ---------------------
   useEffect(() => {
     fetch(
-      `http://3.21.164.220/reviews/?product_id=${props.current}&sort=${sortMethod}`
+      `http://localhost:3001/reviews/${props.current}/sort/${sortMethod}`
     )
       .then((res) => {
         return res.json();
@@ -67,7 +67,7 @@ function ReviewMain(props) {
 
   // -------------- fetch data from reviews meta endpoint ---------------------
   useEffect(() => {
-    fetch(`http://3.21.164.220/reviews/meta?product_id=${props.current}`)
+    fetch(`http://localhost:3001/reviews/${props.current}/meta`)
       .then((res) => {
         return res.json();
       })
